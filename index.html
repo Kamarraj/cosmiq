@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CosmiQ Clinic | Hair Transplant, Laser Hair Reduction &amp; Skin Care in Agra</title>
+<meta name="description" content="CosmiQ Clinic, Pani Ki Tanki Road, Agra. Rated 4.9 by 675 patients. Hair transplant, hair loss treatment, laser hair reduction and skin care. Call 7817040115.">
+<meta name="theme-color" content="#3b1f3f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fbf5f0;--blush:#f6dedb;--blush2:#fbebe8;--rose:#d4808b;--rose-d:#b5586a;--plum:#3b1f3f;--plum2:#2a1530;--lilac:#b89be0;--gold:#c9956b;--ink:#2b1a2e;--mut:#76627a;--line:#ecd9d5;--r:26px;--ease:cubic-bezier(.2,.8,.2,1);--serif:"DM Serif Display",Georgia,serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px;overflow-x:clip}
+html.js:not(.ready){overflow:hidden}
+body{font:300 17px/1.75 Outfit,system-ui,sans-serif;color:var(--ink);background:var(--cream);overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.06;color:var(--plum);letter-spacing:-.01em}
+h1{font-size:clamp(2.7rem,6.4vw,5.2rem)}
+h2{font-size:clamp(2.1rem,4.6vw,3.6rem);margin-bottom:.5rem}
+h3{font-size:1.6rem}
+em{font-style:italic}
+.wrap{max-width:1180px;margin:0 auto;padding-left:22px;padding-right:22px}
+section{padding:104px 0;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font:500 .76rem Outfit,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--rose-d);margin-bottom:18px}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor}
+.lead{color:var(--mut);max-width:56ch;margin-bottom:42px;font-size:1.05rem}
+.dark{background:var(--plum);color:#e9d8e6}
+.dark h2,.dark h3{color:#fff}
+.dark .eyebrow{color:var(--gold)}
+.dark .lead{color:#c9b3c8}
+.blush{background:var(--blush2)}
+:focus-visible{outline:3px solid var(--lilac);outline-offset:3px}
+/* buttons */
+.btn{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 32px;border-radius:999px;font:500 .95rem Outfit,sans-serif;letter-spacing:.06em;text-decoration:none;color:#fff;background:var(--plum);border:1px solid var(--plum);transform:translate(var(--mx,0px),var(--my,0px));transition:transform .35s var(--ease),box-shadow .4s,color .4s}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(120deg,var(--rose),var(--gold));transform:translateY(101%);transition:transform .5s var(--ease)}
+.btn:hover::before{transform:none}
+.btn:hover{box-shadow:0 16px 40px rgba(181,88,106,.35)}
+.btn .arr{transition:transform .3s var(--ease)}
+.btn:hover .arr{transform:translateX(6px)}
+.btn.ghost{background:transparent;color:var(--plum)}
+.btn.ghost:hover{color:#fff;border-color:transparent}
+.dark .btn{background:#fff;color:var(--plum);border-color:#fff}
+.dark .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.dark .btn:hover{color:#fff;border-color:transparent}
+.ic{width:20px;height:20px;fill:currentColor;flex-shrink:0}
+/* loader */
+#loader{position:fixed;inset:0;z-index:100;display:none;place-items:center;background:radial-gradient(700px 500px at 50% 45%,#fff3ef,var(--blush));clip-path:circle(150% at 50% 50%);transition:clip-path 1.1s cubic-bezier(.77,0,.18,1);color:var(--plum)}
+.js #loader{display:grid}
+#loader.done{clip-path:circle(0% at 50% 50%)}
+.ld-c{display:grid;justify-items:center;gap:8px;text-align:center;transition:opacity .5s,transform .8s var(--ease)}
+#loader.done .ld-c{opacity:0;transform:scale(.8)}
+.ld-lotus{width:170px;height:130px;overflow:visible;animation:breathe 3s ease-in-out 1.6s infinite;filter:drop-shadow(0 10px 26px rgba(181,88,106,.35))}
+.pt{fill:url(#pg);fill-opacity:0;stroke:var(--rose-d);stroke-width:1.6;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.3s ease-out forwards,pfill 1s ease forwards;animation-delay:calc(var(--k)*.16s + .1s),calc(var(--k)*.16s + 1.1s)}
+.ld-name{display:flex;gap:.04em;font:400 2.5rem var(--serif);margin-top:10px;letter-spacing:.06em}
+.ld-name span{opacity:0;transform:translateY(18px);filter:blur(6px);animation:fadeup .8s var(--ease) forwards;animation-delay:calc(var(--k)*70ms + .7s)}
+.ld-sub{font-size:.7rem;letter-spacing:.36em;text-transform:uppercase;color:var(--rose-d);opacity:0;animation:fadeup .8s var(--ease) 1.5s forwards}
+.ld-line{width:200px;height:1px;background:rgba(59,31,63,.15);margin-top:12px;position:relative;overflow:hidden}
+.ld-line i{position:absolute;inset:0;background:linear-gradient(90deg,var(--rose),var(--gold));transform:scaleX(0);transform-origin:0 50%}
+.ld-pct{font:400 .8rem Outfit,sans-serif;letter-spacing:.2em;font-variant-numeric:tabular-nums;color:var(--mut)}
+/* chrome */
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;transform:scaleX(0);transform-origin:0 50%;background:linear-gradient(90deg,var(--rose),var(--gold),var(--lilac));z-index:70}
+.cur{position:fixed;left:0;top:0;width:380px;height:380px;margin:-190px 0 0 -190px;border-radius:50%;background:radial-gradient(circle,rgba(212,128,139,.32),rgba(184,155,224,.14) 45%,transparent 70%);pointer-events:none;z-index:2;mix-blend-mode:multiply;opacity:0;transition:opacity .5s}
+.cur.on{opacity:1}
+header{position:sticky;top:0;z-index:40;background:rgba(251,245,240,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+header.sc{border-color:var(--line);box-shadow:0 10px 30px rgba(59,31,63,.07)}
+header .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:88px;padding-top:12px;padding-bottom:12px;transition:min-height .35s var(--ease)}
+header.sc .nav{min-height:70px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.logo svg{width:44px;height:34px;flex-shrink:0;overflow:visible}
+.logo b{display:block;font:400 1.6rem var(--serif);color:var(--plum);line-height:1}
+.logo small{display:block;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--rose-d);font-weight:500;margin-top:3px}
+nav{display:flex;gap:28px;font-size:.92rem;font-weight:400}
+nav a{text-decoration:none;color:var(--mut);position:relative;padding:4px 0;transition:color .2s}
+nav a::after{content:"";position:absolute;left:0;bottom:-2px;height:1px;width:100%;background:var(--rose-d);transform:scaleX(0);transform-origin:100% 50%;transition:transform .45s var(--ease)}
+nav a:hover{color:var(--plum)}
+nav a:hover::after{transform:scaleX(1);transform-origin:0 50%}
+.callbtn{padding:0 24px;min-height:46px;white-space:nowrap;flex-shrink:0}
+.callbtn .ic{animation:ring 1.3s ease-in-out 1s 3}
+/* hero */
+.hero{padding:44px 0 90px;overflow:hidden;background:radial-gradient(700px 520px at 88% 12%,rgba(212,128,139,.26),transparent 62%),radial-gradient(640px 460px at 0% 92%,rgba(184,155,224,.24),transparent 60%),var(--cream)}
+.hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;position:relative;z-index:3}
+.petal{position:absolute;top:-40px;width:18px;height:26px;border-radius:0 100% 0 100%;background:linear-gradient(135deg,var(--rose),var(--blush));opacity:0;z-index:1;animation:fall linear infinite}
+.ch{display:inline-block;opacity:0;transform:translateY(90%) rotate(12deg) scale(.7);filter:blur(10px);animation:chIn .9s var(--ease) forwards;animation-delay:calc(var(--i)*34ms + .1s)}
+.wd{display:inline-block;white-space:nowrap}
+.grad{position:relative;display:inline-block}
+.grad .ch{animation:chIn .9s var(--ease) forwards,wave 3.6s ease-in-out infinite;animation-delay:calc(var(--i)*34ms + .1s),calc(var(--i)*150ms + 1.8s)}
+.grad::after{content:"";position:absolute;left:0;bottom:.02em;height:.07em;width:100%;border-radius:4px;background:linear-gradient(90deg,var(--rose),var(--gold),var(--lilac));transform:scaleX(0);transform-origin:0 50%;animation:ul 1.1s var(--ease) 1.7s forwards}
+.fade{opacity:0;transform:translateY(24px);animation:fadeup 1s var(--ease) forwards;animation-delay:var(--d,1s)}
+.rotline{font:400 clamp(1.15rem,2.3vw,1.6rem) var(--serif);font-style:italic;color:var(--plum);margin:24px 0 14px;display:flex;flex-wrap:wrap;gap:.4em;align-items:center}
+.rot{white-space:nowrap;display:inline-block;height:1.35em;overflow:hidden;vertical-align:bottom;position:relative}
+.rot span{display:block;height:1.35em;line-height:1.35;color:var(--rose-d)}
+.rot-in{display:block;animation:rot 12s var(--ease) infinite}
+.hero p.sub{color:var(--mut);max-width:46ch;margin-bottom:32px;font-size:1.05rem}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.chips{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px}
+.chip{display:inline-flex;align-items:center;gap:12px;padding:10px 20px;border-radius:999px;background:rgba(255,255,255,.7);border:1px solid var(--line);font-size:.9rem;color:var(--mut);backdrop-filter:blur(6px)}
+.chip b{font:400 1.7rem var(--serif);color:var(--plum);line-height:1}
+.stars{display:flex;gap:2px;color:var(--gold)}
+.stars svg{width:14px;height:14px;fill:currentColor}
+.vis{position:relative;max-width:460px;margin-left:auto;width:100%}
+.arch{border-radius:999px 999px 34px 34px;overflow:hidden;aspect-ratio:3/4.05;box-shadow:0 40px 90px rgba(59,31,63,.28);position:relative}
+.arch img{width:100%;height:100%;object-fit:cover;transform:scale(1.2);animation:zoomout 2.6s var(--ease) .3s forwards,kb 22s ease-in-out 3s infinite alternate}
+.arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(59,31,63,.25))}
+.vis::before{content:"";position:absolute;inset:-18px;border:1px solid var(--rose);border-radius:999px 999px 44px 44px;opacity:.5;animation:pulse 5s ease-in-out infinite}
+.px{position:absolute;transition:transform .4s ease-out;transform:translate(var(--tx,0px),var(--ty,0px));z-index:4}
+.dc{width:132px;height:132px;border-radius:50%;overflow:hidden;border:6px solid var(--cream);box-shadow:0 18px 44px rgba(59,31,63,.3);animation:bob 6s ease-in-out infinite}
+.dc img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.bac{background:#fff;border-radius:20px;padding:8px 8px 4px;box-shadow:0 20px 50px rgba(59,31,63,.3);width:156px;animation:bob 7s ease-in-out -2s infinite;transform-origin:50% 100%}
+.bac img{border-radius:14px;aspect-ratio:1;object-fit:cover;width:100%}
+.bac small{display:block;text-align:center;font:500 .66rem Outfit,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--rose-d);padding:6px 0 3px}
+.spin{width:112px;height:112px;animation:spin 18s linear infinite}
+.spin text{font:500 10.5px Outfit,sans-serif;letter-spacing:.28em;fill:var(--plum);text-transform:uppercase}
+.spinw{background:var(--cream);border-radius:50%;box-shadow:0 14px 36px rgba(59,31,63,.2);display:grid;place-items:center;width:112px;height:112px;position:relative}
+.spinw::after{content:"";position:absolute;width:14px;height:14px;border-radius:50%;background:var(--rose)}
+/* marquee */
+.mqw{padding:34px 0;overflow:hidden;white-space:nowrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--cream)}
+.mq{display:inline-flex;will-change:transform}
+.mq span{font:400 clamp(3rem,8vw,6rem) var(--serif);line-height:1.1;padding-right:.5em;color:transparent;-webkit-text-stroke:1.2px var(--plum)}
+.mq span:nth-child(even){color:var(--rose);-webkit-text-stroke:0;font-style:italic}
+/* services panels */
+.pns{display:flex;gap:12px;height:580px}
+.pn{position:relative;flex:1;min-width:0;border-radius:var(--r);overflow:hidden;cursor:pointer;transition:flex .9s var(--ease);background:var(--plum)}
+.pn.on{flex:5.2}
+.pn img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease),filter .7s;filter:saturate(.7) brightness(.78)}
+.pn.on img{filter:none;transform:scale(1.05)}
+.pn::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(42,21,48,.9))}
+.pn .vt{position:absolute;left:50%;bottom:28px;writing-mode:vertical-rl;transform:translateX(-50%) rotate(180deg);color:#fff;font:400 1.5rem var(--serif);white-space:nowrap;z-index:2;transition:opacity .4s}
+.pn.on .vt{opacity:0}
+.pn .tx{position:absolute;left:0;right:0;bottom:0;padding:34px;z-index:2;color:#fff;opacity:0;transform:translateY(26px);transition:opacity .5s,transform .8s var(--ease)}
+.pn.on .tx{opacity:1;transform:none;transition-delay:.35s}
+.pn .no{font:500 .75rem Outfit,sans-serif;letter-spacing:.3em;color:var(--blush)}
+.pn h3{color:#fff;font-size:clamp(1.8rem,3vw,2.4rem);margin:6px 0 8px}
+.pn p{color:#f0dcea;max-width:44ch;font-size:.98rem}
+/* doctor */
+.doc{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.dp{position:relative;max-width:450px}
+.dp .m{--cr:200px 200px 26px 26px;aspect-ratio:1/1.1;border-radius:200px 200px var(--r) var(--r);overflow:hidden;box-shadow:0 36px 80px rgba(59,31,63,.22)}
+.dp .m img{width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.dp .s{position:absolute;right:-34px;bottom:-34px;width:48%;aspect-ratio:4/3;border-radius:20px;overflow:hidden;border:6px solid var(--cream);box-shadow:0 22px 50px rgba(59,31,63,.3)}
+.dp .s img{width:100%;height:100%;object-fit:cover}
+.dp .tg{position:absolute;left:-18px;top:34px;background:var(--plum);color:#fff;padding:12px 22px;border-radius:999px;font:400 1.05rem var(--serif);font-style:italic;box-shadow:0 14px 34px rgba(59,31,63,.35);animation:bob 6s ease-in-out infinite}
+.doc p{color:var(--mut);margin-bottom:16px}
+.ticks{list-style:none;padding:0;margin:24px 0 30px;display:grid;gap:12px}
+.ticks li{display:flex;gap:14px;align-items:flex-start;font-weight:400}
+.ticks li::before{content:"\2726";color:var(--rose-d);flex-shrink:0;line-height:1.75}
+.dark .ticks li{color:#e9d8e6}
+.dark .ticks li::before{color:var(--gold)}
+/* hair */
+.hair{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.pst{position:relative;max-width:440px;margin-left:auto;width:100%}
+.pst .mk{border-radius:var(--r);transform:rotate(2.5deg);box-shadow:0 40px 90px rgba(0,0,0,.45);transition:transform .8s var(--ease)}
+.pst:hover .mk{transform:rotate(0)}
+.pst .mk img{width:100%}
+.pst::before{content:"";position:absolute;inset:-20px -20px 20px 20px;border:1px solid var(--gold);border-radius:var(--r);transform:rotate(-2deg)}
+.ring{position:absolute;width:120px;height:120px;border-radius:50%;border:1px dashed var(--gold);left:-50px;bottom:-30px;animation:spin 30s linear infinite}
+.ring::after{content:"";position:absolute;top:-6px;left:50%;width:11px;height:11px;border-radius:50%;background:var(--gold)}
+/* results */
+.rhd{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.rhd .lead{margin-bottom:0}
+.arrows{display:flex;gap:10px}
+.arrows button{width:52px;height:52px;border-radius:50%;border:1px solid var(--plum);background:transparent;color:var(--plum);font-size:1.3rem;cursor:pointer;transition:background .3s,color .3s,transform .3s var(--ease)}
+.arrows button:hover{background:var(--plum);color:#fff;transform:scale(1.08)}
+.rs{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:10px;cursor:grab}
+.rs::-webkit-scrollbar{display:none}
+.rs.drag{cursor:grabbing;scroll-snap-type:none;scroll-behavior:auto}
+.rc{flex:0 0 min(430px,82vw);scroll-snap-align:start;background:#fff;border-radius:var(--r);padding:12px 12px 20px;box-shadow:0 20px 50px rgba(59,31,63,.1);transition:transform .6s var(--ease)}
+.rc:hover{transform:translateY(-8px)}
+.rc img{border-radius:18px;aspect-ratio:1;object-fit:cover;width:100%;pointer-events:none;-webkit-user-drag:none}
+.rc h3{font-size:1.35rem;margin:16px 10px 0}
+.rc p{margin:2px 10px 0;color:var(--mut);font-size:.92rem}
+.pgb{height:2px;background:var(--line);margin-top:26px;border-radius:2px;overflow:hidden}
+.pgb i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--rose),var(--gold));transform:scaleX(.2);transform-origin:0 50%}
+.note{font-size:.82rem;color:var(--mut);margin-top:14px}
+/* journey */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;position:relative;margin-top:10px}
+.steps::before{content:"";position:absolute;top:30px;left:6%;right:6%;height:1px;background:var(--rose);transform:scaleX(0);transform-origin:0 50%;transition:transform 1.8s var(--ease) .2s}
+.steps.in::before{transform:scaleX(1)}
+.step{text-align:center;padding:0 6px;position:relative}
+.step i{display:grid;place-items:center;width:60px;height:60px;margin:0 auto 20px;border-radius:50%;background:var(--cream);border:1px solid var(--rose);font:400 1.5rem var(--serif);font-style:normal;color:var(--rose-d);position:relative;z-index:1;transition:background .4s,color .4s,transform .5s var(--ease)}
+.step:hover i{background:var(--rose-d);color:#fff;transform:scale(1.14) rotate(8deg)}
+.step p{color:var(--mut);font-size:.95rem}
+/* clinic */
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.cc{display:grid;gap:22px}
+.cc:nth-child(2){margin-top:64px}
+.cc:nth-child(3){margin-top:22px}
+.cg button{position:relative;padding:0;border:0;background:var(--blush);border-radius:var(--r);overflow:hidden;cursor:zoom-in;display:block;width:100%}
+.cg img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.cg button:hover img{transform:scale(1.08)}
+.cg button::after{content:"+";position:absolute;right:14px;bottom:14px;width:42px;height:42px;border-radius:50%;background:#fff;color:var(--plum);font:400 1.5rem/42px var(--serif);opacity:0;transform:scale(.5) rotate(-90deg);transition:.5s var(--ease)}
+.cg button:hover::after{opacity:1;transform:none}
+.ar43{aspect-ratio:4/3}.ar45{aspect-ratio:4/5}.ar11{aspect-ratio:1}.ar54{aspect-ratio:5/4}
+#lb{position:fixed;inset:0;background:rgba(26,12,30,.95);display:none;align-items:center;justify-content:center;z-index:90;padding:24px}
+#lb.on{display:flex;animation:fadein .3s}
+#lb img{max-height:88vh;max-width:92vw;border-radius:16px;animation:zoom .5s var(--ease)}
+#lb button{position:absolute;background:#fff;border:0;border-radius:50%;width:48px;height:48px;font-size:1.4rem;cursor:pointer;color:var(--plum)}
+#lb .x{top:16px;right:18px}#lb .pv{left:14px;top:50%}#lb .nx{right:14px;top:50%}
+/* reviews */
+.rv{text-align:center;background:linear-gradient(180deg,var(--cream),var(--blush));overflow:hidden}
+.rv .big{font:400 clamp(7rem,22vw,15rem) var(--serif);line-height:.95;background:linear-gradient(120deg,var(--rose-d),var(--gold),var(--lilac),var(--rose-d));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 8s linear infinite}
+.rv .stars{justify-content:center;gap:8px;margin:14px 0}
+.rv .stars svg{width:30px;height:30px;transform:scale(0) rotate(-60deg)}
+.rv.in .stars svg{animation:pop .7s var(--ease) forwards;animation-delay:calc(var(--k)*130ms + .2s)}
+.rv p{color:var(--mut);margin:10px 0 30px}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1.15fr;gap:52px}
+.info div{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.info div:last-child{border:0}
+.info b{min-width:96px;color:var(--gold);font-weight:500;letter-spacing:.06em}
+.info span,.info a{color:#e9d8e6}
+.map{border-radius:var(--r);overflow:hidden;min-height:440px;border:1px solid rgba(255,255,255,.2);filter:grayscale(.3) sepia(.15)}
+.map iframe{width:100%;height:100%;min-height:440px;border:0}
+footer{background:var(--plum2);color:#c9b3c8;padding:68px 0 28px;font-size:.95rem}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1.3fr;gap:40px}
+footer h4{font:400 1.5rem var(--serif);color:#fff;margin-bottom:14px}
+footer a{display:block;text-decoration:none;padding:3px 0;transition:color .2s,transform .3s var(--ease)}
+footer a:hover{color:var(--blush);transform:translateX(4px)}
+.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:44px;padding-top:20px;font-size:.84rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+.fab{position:fixed;left:14px;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));max-width:520px;margin:0 auto;z-index:45;display:none;gap:10px}
+.fab .btn{flex:1;white-space:nowrap;padding:14px 10px;box-shadow:0 12px 30px rgba(59,31,63,.4)}
+.fab .btn.ghost{background:var(--cream);color:var(--plum);border-color:var(--plum)}
+/* reveal systems */
+.js .rv-el{opacity:0;transform:translateY(36px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:calc(var(--d,0)*110ms)}
+.js .rv-el.in{opacity:1;transform:none}
+.js .rv-l{transform:translateX(-46px)}
+.js .rv-r{transform:translateX(46px)}
+.js .mk{clip-path:inset(100% 0 0 0 round var(--cr,var(--r)));transition:clip-path 1.3s var(--ease);transition-delay:calc(var(--d,0)*120ms)}
+.js .mk img{transform:scale(1.3);transition:transform 1.8s var(--ease),filter .6s;transition-delay:calc(var(--d,0)*120ms)}
+.js .mk.in{clip-path:inset(0 0 0 0 round var(--cr,var(--r)))}
+.js .mk.in img{transform:scale(1)}
+.js .mk.in:hover img{transform:scale(1.06)}
+.wm{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em}
+.wv{display:inline-block}
+.js .sw .wv{transform:translateY(118%)}
+.js .sw.in .wv{transform:none;transition:transform 1.1s var(--ease);transition-delay:calc(var(--w)*60ms)}
+.par{will-change:transform;transform:translateY(var(--py,0px))}
+.js:not(.ready) .hero *,.js:not(.ready) .hero *::after,.js:not(.ready) .hero *::before{animation-play-state:paused!important}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pfill{to{fill-opacity:.9}}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@keyframes chIn{to{opacity:1;transform:none;filter:none}}
+@keyframes wave{0%,100%{color:var(--rose-d)}50%{color:var(--lilac)}}
+@keyframes ul{to{transform:scaleX(1)}}
+@keyframes fadeup{to{opacity:1;transform:none;filter:none}}
+@keyframes fadein{from{opacity:0}}
+@keyframes zoom{from{transform:scale(.9);opacity:0}}
+@keyframes zoomout{to{transform:scale(1)}}
+@keyframes kb{to{transform:scale(1.1) translateY(-2%)}}
+@keyframes rot{0%,16%{transform:translateY(0)}20%,36%{transform:translateY(-1.35em)}40%,56%{transform:translateY(-2.7em)}60%,76%{transform:translateY(-4.05em)}80%,96%{transform:translateY(-5.4em)}100%{transform:translateY(-6.75em)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes pulse{0%,100%{opacity:.25;transform:scale(1)}50%{opacity:.7;transform:scale(1.025)}}
+@keyframes fall{0%{transform:translate3d(0,-5vh,0) rotate(0);opacity:0}10%{opacity:.75}90%{opacity:.6}100%{transform:translate3d(60px,105vh,0) rotate(540deg);opacity:0}}
+@keyframes shimmer{to{background-position:300% 0}}
+@keyframes pop{to{transform:scale(1) rotate(0)}}
+@keyframes ring{0%,100%{transform:rotate(0)}15%{transform:rotate(-16deg)}30%{transform:rotate(14deg)}45%{transform:rotate(-10deg)}60%{transform:rotate(8deg)}75%{transform:rotate(0)}}
+/* responsive */
+@media(max-width:1060px){nav{display:none}}
+@media(max-width:900px){
+section{padding:68px 0}
+.hero .wrap,.doc,.hair,.visit,.fg{grid-template-columns:1fr}
+.hero .wrap{gap:60px}
+.vis{margin:0 auto;max-width:390px}
+.pst{margin:0 auto}
+.dp{margin:0 auto 30px}
+.dp .s{right:-12px;bottom:-26px}
+.steps{grid-template-columns:1fr 1fr;row-gap:38px}
+.steps::before{display:none}
+.cg{grid-template-columns:1fr 1fr;gap:14px}
+.cc{gap:14px}
+.cc:nth-child(3){display:contents}
+.cc:nth-child(2){margin-top:30px}
+.map,.map iframe{min-height:320px}
+.fab{display:flex}
+body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+}
+@media(max-width:760px){
+.pns{flex-direction:column;height:auto}
+.pn{flex:none;height:84px;transition:height .9s var(--ease)}
+.pn.on{height:400px}
+.pn .vt{writing-mode:horizontal-tb;transform:translateY(-50%);left:24px;bottom:auto;top:50%}
+.pn .tx{padding:24px}
+}
+@media(max-width:560px){
+body{font-size:16px}
+.wrap{padding-left:16px;padding-right:16px}
+section{padding:54px 0}
+.hero{padding:24px 0 56px}
+h1{font-size:clamp(2.4rem,11.5vw,3.2rem)}
+header .nav{min-height:82px;padding-top:14px;padding-bottom:14px}
+header.sc .nav{min-height:68px}
+.logo b{font-size:1.4rem}
+.logo svg{width:38px;height:30px}
+.logo small{font-size:.52rem;letter-spacing:.16em}
+.callbtn{width:48px;height:48px;min-height:48px;padding:0}
+.callbtn .num{display:none}
+.cta .btn{flex:1 1 100%}
+.dc{width:96px;height:96px}
+.bac{width:116px}
+.spin,.spinw{width:84px;height:84px}
+.info div{flex-direction:column;gap:2px}
+.info b{min-width:0}
+.steps{grid-template-columns:1fr}
+.copy{flex-direction:column}
+.rhd .arrows{display:none}
+.ld-name{font-size:2rem}
+.mq span{-webkit-text-stroke-width:1px}
+}
+@media(max-width:360px){
+.wrap{padding-left:14px;padding-right:14px}
+.logo small{display:none}
+.fab{left:10px;right:10px}
+}
+@media(prefers-reduced-motion:reduce){
+#loader{display:none!important}
+*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+.ch,.fade{opacity:1!important;transform:none!important;filter:none!important}
+.grad::after{transform:scaleX(1)!important}
+.js .rv-el,.js .sw .wv{opacity:1!important;transform:none!important}
+.js .mk{clip-path:none!important}
+.js .mk img,.arch img{transform:none!important}
+.rv .stars svg{transform:none!important}
+.steps::before{transform:scaleX(1)!important}
+.petal,.cur{display:none}
+}
+</style>
+<script>(function(d){d.classList.add('js');setTimeout(function(){d.classList.add('ready');var l=document.getElementById('loader');if(l)l.remove()},9000)})(document.documentElement)</script>
+</head>
+<body>
+<div id="bar"></div>
+<div class="cur" id="cur"></div>
+
+<div id="loader" aria-hidden="true">
+<div class="ld-c">
+<svg class="ld-lotus" viewBox="0 0 160 110">
+<defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d4808b"/><stop offset=".6" stop-color="#c9956b"/><stop offset="1" stop-color="#b89be0"/></linearGradient></defs>
+<path class="pt" style="--k:0" pathLength="1" d="M80 92C48 96 22 84 10 60c24-2 52 10 70 32z"/>
+<path class="pt" style="--k:0" pathLength="1" d="M80 92c32 4 58-8 70-32-24-2-52 10-70 32z"/>
+<path class="pt" style="--k:1" pathLength="1" d="M80 92C54 84 36 62 38 34c20 6 36 28 42 58z"/>
+<path class="pt" style="--k:1" pathLength="1" d="M80 92c26-8 44-30 42-58-20 6-36 28-42 58z"/>
+<path class="pt" style="--k:2" pathLength="1" d="M80 14C64 34 62 62 80 92c18-30 16-58 0-78z"/>
+</svg>
+<div class="ld-name"><span style="--k:0">C</span><span style="--k:1">o</span><span style="--k:2">s</span><span style="--k:3">m</span><span style="--k:4">i</span><span style="--k:5">Q</span></div>
+<div class="ld-sub">Hair &amp; Skin Clinic · Agra</div>
+<div class="ld-line"><i id="ldbar"></i></div>
+<div class="ld-pct" id="ldpct">0%</div>
+</div>
+</div>
+
+<header id="hd">
+<div class="wrap nav">
+<a class="logo" href="#top" aria-label="CosmiQ Clinic">
+<svg viewBox="0 0 160 110" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d4808b"/><stop offset=".6" stop-color="#c9956b"/><stop offset="1" stop-color="#b89be0"/></linearGradient></defs><g fill="url(#lg)"><path d="M80 92C48 96 22 84 10 60c24-2 52 10 70 32z"/><path d="M80 92c32 4 58-8 70-32-24-2-52 10-70 32z"/><path d="M80 92C54 84 36 62 38 34c20 6 36 28 42 58z"/><path d="M80 92c26-8 44-30 42-58-20 6-36 28-42 58z"/><path d="M80 14C64 34 62 62 80 92c18-30 16-58 0-78z"/></g></svg>
+<span><b>CosmiQ</b><small>Hair &amp; Skin Clinic · Agra</small></span>
+</a>
+<nav aria-label="Main"><a href="#services">Treatments</a><a href="#doctor">Doctor</a><a href="#hair">Hair</a><a href="#results">Results</a><a href="#clinic">Clinic</a><a href="#visit">Visit</a></nav>
+<a class="btn callbtn mag" href="tel:+917817040115" aria-label="Call CosmiQ Clinic on 7817040115"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg><span class="num">7817040115</span></a>
+</div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+<span class="petal" style="left:6%;animation-duration:14s;animation-delay:1s"></span>
+<span class="petal" style="left:18%;animation-duration:17s;animation-delay:4s;width:12px;height:18px"></span>
+<span class="petal" style="left:34%;animation-duration:12s;animation-delay:2s"></span>
+<span class="petal" style="left:52%;animation-duration:18s;animation-delay:6s;width:14px;height:20px"></span>
+<span class="petal" style="left:68%;animation-duration:13s;animation-delay:3s"></span>
+<span class="petal" style="left:82%;animation-duration:16s;animation-delay:7s;width:12px;height:18px"></span>
+<span class="petal" style="left:92%;animation-duration:15s;animation-delay:5s"></span>
+<div class="wrap">
+<div>
+<span class="eyebrow fade" style="--d:.2s" data-scr>Agra · Uttar Pradesh</span>
+<h1 class="split">Confidence begins with <em class="grad">healthy</em> hair and skin.</h1>
+<div class="rotline fade" style="--d:1.4s">Specialists in <span class="rot"><span class="rot-in"><span>hair transplant</span><span>hair loss treatment</span><span>laser hair reduction</span><span>skin care</span><span>laser treatments</span><span>hair transplant</span></span></span></div>
+<p class="sub fade" style="--d:1.6s">CosmiQ Clinic is a dermatology and hair clinic near Hridyam Hospital, Agra. Personalised treatment in a calm, beautifully designed space.</p>
+<div class="cta fade" style="--d:1.8s">
+<a class="btn mag" href="https://wa.me/917817040115?text=Hello%20CosmiQ%20Clinic%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener">Book consultation <span class="arr">&rarr;</span></a>
+<a class="btn ghost mag" href="tel:+917817040115">Call 7817040115</a>
+</div>
+<div class="chips fade" style="--d:2s">
+<div class="chip"><b>4.9</b><span><span class="stars" aria-label="4.9 out of 5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5L9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5L9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5L9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5L9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5L9 8.9z"/></svg></span>675 Google reviews</span></div>
+<div class="chip">Opens at 12 pm</div>
+</div>
+</div>
+<div class="vis fade" style="--d:.6s" id="vis">
+<div class="arch"><img src="3.png" alt="Treatment room with a pink reclining chair at CosmiQ Clinic" width="720" height="980"></div>
+<div class="px" data-depth="26" style="top:-3%;right:-9%"><div class="bac"><img src="10.png" alt="Hair growth before and after"><small>Before · After</small></div></div>
+<div class="px" data-depth="-22" style="left:-9%;bottom:6%"><div class="dc"><img src="1.png" alt="Dr Harmeet Kaur"></div></div>
+<div class="px" data-depth="34" style="left:-7%;top:6%"><div class="spinw"><svg class="spin" viewBox="0 0 112 112" aria-hidden="true"><defs><path id="cp" d="M56 56m-40 0a40 40 0 1 1 80 0a40 40 0 1 1-80 0"/></defs><text><textPath href="#cp">Hair · Skin · Laser · Glow · </textPath></text></svg></div></div>
+</div>
+</div>
+</section>
+
+<div class="mqw" aria-hidden="true"><div class="mq" id="mq"><span>Hair Transplant</span><span>Laser Hair Reduction</span><span>Skin Care</span><span>Hair Loss Treatment</span><span>Hair Transplant</span><span>Laser Hair Reduction</span><span>Skin Care</span><span>Hair Loss Treatment</span></div></div>
+
+<section id="services">
+<div class="wrap">
+<span class="eyebrow rv-el">Treatments</span>
+<h2 class="sw">Care for your hair, <em>skin</em> and confidence</h2>
+<p class="lead rv-el" style="--d:1">Hover or tap a treatment to explore. Every plan begins with a proper consultation.</p>
+<div class="pns rv-el" style="--d:2" id="pns">
+<article class="pn on" tabindex="0"><img src="10.png" alt="Hair transplant before and after" loading="lazy"><span class="vt">Hair transplant</span><div class="tx"><span class="no">01</span><h3>Hair transplant</h3><p>Natural-looking restoration for thinning crowns and receding hairlines, planned around your hair pattern.</p></div></article>
+<article class="pn" tabindex="0"><img src="8.png" alt="Hair loss treatment results" loading="lazy"><span class="vt">Hair loss treatment</span><div class="tx"><span class="no">02</span><h3>Hair loss treatment</h3><p>Find the cause first. Scalp analysis and a personalised plan to slow shedding and support regrowth.</p></div></article>
+<article class="pn" tabindex="0"><img src="3.png" alt="Laser treatment room with pink chair" loading="lazy"><span class="vt">Laser hair reduction</span><div class="tx"><span class="no">03</span><h3>Laser hair reduction</h3><p>Smooth, long-lasting reduction of unwanted hair in a comfortable, private treatment room.</p></div></article>
+<article class="pn" tabindex="0"><img src="5.png" alt="Skin care treatment room" loading="lazy"><span class="vt">Skin care</span><div class="tx"><span class="no">04</span><h3>Skin care treatments</h3><p>Customised care for a clearer, brighter and healthier complexion.</p></div></article>
+<article class="pn" tabindex="0"><img src="11.png" alt="Skin laser treatment result on hands" loading="lazy"><span class="vt">Laser skin</span><div class="tx"><span class="no">05</span><h3>Laser skin treatments</h3><p>Advanced laser procedures for visible, lasting improvement in the skin.</p></div></article>
+</div>
+</div>
+</section>
+
+<section id="doctor" class="blush">
+<div class="wrap doc">
+<div class="dp rv-el rv-l"><div class="m mk"><img src="1.png" alt="Dr Harmeet Kaur, dermatologist at CosmiQ Clinic" loading="lazy"></div><div class="s par" data-speed=".05"><img src="6.png" alt="Doctor at her desk in the clinic" loading="lazy"></div><div class="tg">Dermatologist</div></div>
+<div>
+<span class="eyebrow rv-el">Meet your doctor</span>
+<h2 class="sw">Dr Harmeet Kaur</h2>
+<p class="rv-el" style="--d:1">Patients across Agra choose CosmiQ for honest advice and careful, personalised treatment. Every consultation begins by listening to your concerns and understanding your goals.</p>
+<ul class="ticks rv-el" style="--d:2"><li>Clear diagnosis and realistic expectations</li><li>Treatment plans tailored to your hair and skin type</li><li>Calm, private and hygienic clinic environment</li><li>Rated 4.9 on Google by 675 patients</li></ul>
+<a class="btn mag rv-el" style="--d:3" href="tel:+917817040115">Book a consultation <span class="arr">&rarr;</span></a>
+</div>
+</div>
+</section>
+
+<section id="hair" class="dark">
+<div class="wrap hair">
+<div>
+<span class="eyebrow rv-el">Hair restoration</span>
+<h2 class="sw">Suffering from early-age baldness?</h2>
+<p class="lead rv-el" style="--d:1">Hair loss can start earlier than you expect, and earlier treatment gives better results. Our hair transplant and hair loss programmes are planned around you.</p>
+<ul class="ticks rv-el" style="--d:2"><li>Detailed scalp and hair assessment</li><li>Hairline design that suits your face</li><li>Hair transplant and non-surgical options</li><li>Follow-up care to protect your results</li></ul>
+<a class="btn mag rv-el" style="--d:3" href="https://wa.me/917817040115?text=Hello%20CosmiQ%20Clinic%2C%20I%20want%20to%20know%20about%20hair%20transplant." target="_blank" rel="noopener">Ask about hair transplant <span class="arr">&rarr;</span></a>
+</div>
+<div class="pst rv-el rv-r"><div class="mk"><img src="7.png" alt="CosmiQ Clinic hair transplant advertisement featuring Dr Harmeet Kaur" loading="lazy"></div><span class="ring"></span></div>
+</div>
+</section>
+
+<section id="results" class="blush">
+<div class="wrap">
+<div class="rhd">
+<div><span class="eyebrow rv-el">Results</span><h2 class="sw">Real change, <em>real</em> confidence</h2><p class="lead rv-el" style="--d:1">Drag or swipe to browse patient results.</p></div>
+<div class="arrows"><button id="rp" aria-label="Previous">&#8592;</button><button id="rn" aria-label="Next">&#8594;</button></div>
+</div>
+<div class="rs rv-el" id="rs">
+<div class="rc"><img src="10.png" alt="Hair before and after treatment" loading="lazy"><h3>Hair restoration</h3><p>Top view, before and after</p></div>
+<div class="rc"><img src="9.png" alt="Hair loss treatment before and after" loading="lazy"><h3>Hair loss treatment</h3><p>Visible improvement in density</p></div>
+<div class="rc"><img src="8.png" alt="Hair thinning treatment before and after" loading="lazy"><h3>Hair thickness</h3><p>Fuller, healthier-looking hair</p></div>
+<div class="rc"><img src="11.png" alt="Skin laser treatment before and after on hands" loading="lazy"><h3>Laser skin treatment</h3><p>Before and after on the hands</p></div>
+</div>
+<div class="pgb"><i id="rpg"></i></div>
+<p class="note">Results vary from patient to patient. Photos shared with consent.</p>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<div style="text-align:center">
+<span class="eyebrow rv-el">Your journey</span>
+<h2 class="sw">Simple, guided, <em>unhurried</em></h2>
+</div>
+<div class="steps rv-el" id="steps" style="margin-top:50px">
+<div class="step"><i>1</i><h3>Consult</h3><p>Share your concern. We examine and listen.</p></div>
+<div class="step"><i>2</i><h3>Analyse</h3><p>Scalp and skin assessment to find the cause.</p></div>
+<div class="step"><i>3</i><h3>Plan</h3><p>A clear plan with options, timeline and cost.</p></div>
+<div class="step"><i>4</i><h3>Treat</h3><p>Comfortable treatment with follow-up care.</p></div>
+</div>
+</div>
+</section>
+
+<section id="clinic" class="blush">
+<div class="wrap">
+<span class="eyebrow rv-el">The clinic</span>
+<h2 class="sw">A space designed to <em>soothe</em></h2>
+<p class="lead rv-el" style="--d:1">Soft colours, warm lighting and spotless rooms. Tap a photo to enlarge.</p>
+<div class="cg">
+<div class="cc">
+<div class="par" data-speed=".04"><button class="mk ar43"><img src="4.png" alt="Reception with CosmiQ Clinic signage" loading="lazy"></button></div>
+<div class="par" data-speed=".02"><button class="mk ar11" style="--d:1"><img src="13.png" alt="Waiting lounge with seating" loading="lazy"></button></div>
+</div>
+<div class="cc">
+<div class="par" data-speed=".07"><button class="mk ar45" style="--d:1"><img src="3.png" alt="Pink treatment chair room" loading="lazy"></button></div>
+<div class="par" data-speed=".03"><button class="mk ar43" style="--d:2"><img src="2.png" alt="Open waiting area" loading="lazy"></button></div>
+</div>
+<div class="cc">
+<div class="par" data-speed=".05"><button class="mk ar54" style="--d:2"><img src="5.png" alt="Treatment room with brown chair" loading="lazy"></button></div>
+<div class="par" data-speed=".06"><button class="mk ar43" style="--d:3"><img src="12.png" alt="Front desk with certificates on the wall" loading="lazy"></button></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="rv" id="reviews">
+<div class="wrap">
+<span class="eyebrow" style="justify-content:center">Patient love</span>
+<div class="big" data-count="4.9" data-dec="1">4.9</div>
+<div class="stars" aria-label="4.9 out of 5 stars">
+<svg style="--k:0" viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.7-5.700 5 1.700 7.400L12 18l-6.500 4 1.700-7.400-5.700-5L9 8.900z"/></svg><svg style="--k:1" viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.7-5.700 5 1.700 7.400L12 18l-6.500 4 1.700-7.400-5.700-5L9 8.900z"/></svg><svg style="--k:2" viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.7-5.700 5 1.700 7.400L12 18l-6.500 4 1.700-7.400-5.700-5L9 8.900z"/></svg><svg style="--k:3" viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.7-5.700 5 1.700 7.400L12 18l-6.500 4 1.700-7.400-5.700-5L9 8.900z"/></svg><svg style="--k:4" viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.7-5.700 5 1.700 7.400L12 18l-6.500 4 1.700-7.400-5.700-5L9 8.900z"/></svg>
+</div>
+<p>Based on <span data-count="675">675</span> Google reviews</p>
+<a class="btn ghost mag" href="https://maps.app.goo.gl/bjzWYFkg8Qrpz23Y6" target="_blank" rel="noopener">Read reviews on Google</a>
+</div>
+</section>
+
+<section id="visit" class="dark">
+<div class="wrap visit">
+<div>
+<span class="eyebrow rv-el">Visit us</span>
+<h2 class="sw">Book your <em>consultation</em></h2>
+<div class="info rv-el" style="--d:1">
+<div><b>Address</b><span>E-27, Pani Ki Tanki Rd, near Hridyam Hospital, Professors Colony, Ghatwasan, Kamla Nagar, Agra, Uttar Pradesh 282005</span></div>
+<div><b>Phone</b><a href="tel:+917817040115">7817040115</a></div>
+<div><b>Hours</b><span>Opens at 12 pm</span></div>
+<div><b>Directions</b><a href="https://maps.app.goo.gl/bjzWYFkg8Qrpz23Y6" target="_blank" rel="noopener">Open in Google Maps</a></div>
+</div>
+<div class="cta rv-el" style="margin-top:24px;--d:2">
+<a class="btn mag" href="https://wa.me/917817040115?text=Hello%20CosmiQ%20Clinic%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener">WhatsApp us</a>
+<a class="btn ghost mag" href="tel:+917817040115">Call</a>
+</div>
+</div>
+<div class="map rv-el rv-r"><iframe title="CosmiQ Clinic on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=CosmiQ%20Clinic%20Pani%20Ki%20Tanki%20Road%20Agra&amp;output=embed"></iframe></div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="wrap">
+<div class="fg">
+<div><h4>CosmiQ Clinic</h4><p>Hair transplant, hair loss treatment, laser hair reduction and skin care in Agra.</p></div>
+<div><h4>Explore</h4><a href="#services">Treatments</a><a href="#doctor">Doctor</a><a href="#hair">Hair</a><a href="#results">Results</a><a href="#visit">Visit</a></div>
+<div><h4>Contact</h4><a href="tel:+917817040115">7817040115</a><a href="https://maps.app.goo.gl/bjzWYFkg8Qrpz23Y6" target="_blank" rel="noopener">E-27, Pani Ki Tanki Rd, near Hridyam Hospital, Professors Colony, Ghatwasan, Kamla Nagar, Agra 282005</a><p style="margin-top:8px">Opens at 12 pm</p></div>
+</div>
+<div class="copy"><span>&copy; 2026 CosmiQ Clinic. All rights reserved.</span><span>Results vary by patient. Please consult the doctor for advice specific to you.</span></div>
+</div>
+</footer>
+
+<div class="fab">
+<a class="btn" href="tel:+917817040115"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>Call</a>
+<a class="btn ghost" href="https://wa.me/917817040115" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>WhatsApp</a>
+</div>
+
+<div id="lb" role="dialog" aria-label="Photo viewer"><button class="x" aria-label="Close">&times;</button><button class="pv" aria-label="Previous">&#8249;</button><button class="nx" aria-label="Next">&#8250;</button><img alt=""></div>
+
+<script>
+(function(){
+var d=document.documentElement;
+function $(s,c){return(c||document).querySelector(s)}
+function $$(s,c){return[].slice.call((c||document).querySelectorAll(s))}
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var canHover=matchMedia('(hover:hover)').matches;
+
+/* text splitting: mode 'c' = characters, 'w' = words */
+function split(el,mode){
+var n=0;
+function walk(node){
+var f=document.createDocumentFragment();
+[].slice.call(node.childNodes).forEach(function(c){
+if(c.nodeType===3){
+c.textContent.split(/(\s+)/).forEach(function(t){
+if(!t)return;
+if(/^\s+$/.test(t)){f.appendChild(document.createTextNode(' '));return}
+if(mode==='c'){
+var w=document.createElement('span');w.className='wd';w.setAttribute('aria-hidden','true');
+t.split('').forEach(function(ch){var s=document.createElement('span');s.className='ch';s.style.setProperty('--i',n++);s.textContent=ch;w.appendChild(s)});
+f.appendChild(w);
+}else{
+var m=document.createElement('span');m.className='wm';m.setAttribute('aria-hidden','true');
+var v=document.createElement('span');v.className='wv';v.style.setProperty('--w',n++);v.textContent=t;m.appendChild(v);f.appendChild(m);
+}
+});
+}else if(c.nodeType===1){var cl=c.cloneNode(false);cl.appendChild(walk(c));f.appendChild(cl)}
+});
+return f;
+}
+var label=el.textContent.replace(/\s+/g,' ').trim();
+var fr=walk(el);el.textContent='';el.setAttribute('aria-label',label);el.appendChild(fr);
+}
+$$('.split').forEach(function(e){split(e,'c')});
+$$('.sw').forEach(function(e){split(e,'w')});
+
+function scramble(el){
+var final=el.textContent,chars='ABCDEFGHIJKLMNOPQRSTUVWXYZ',t0=performance.now(),dur=1200;
+(function f(now){
+var p=Math.min((now-t0)/dur,1),out='';
+for(var i=0;i<final.length;i++){var c=final[i];out+=(c===' '||c==='·'||i<final.length*p)?c:chars[Math.floor(Math.random()*26)]}
+el.textContent=out;
+if(p<1)requestAnimationFrame(f);else el.textContent=final;
+})(t0);
+}
+function ready(){
+d.classList.add('ready');
+if(!reduce)$$('[data-scr]').forEach(function(e){setTimeout(function(){scramble(e)},300)});
+}
+
+/* loader */
+var L=$('#loader');
+if(!L||reduce){if(L)L.remove();ready()}
+else{
+var pct=$('#ldpct'),bar=$('#ldbar'),t0=performance.now(),dur=3000,loaded=document.readyState==='complete',fin=false;
+addEventListener('load',function(){loaded=true});
+(function tick(now){
+var p=Math.min((now-t0)/dur,1);
+if(!loaded)p=Math.min(p,.92);
+var e=1-Math.pow(1-p,2);
+bar.style.transform='scaleX('+e+')';
+pct.textContent=Math.round(e*100)+'%';
+if(p>=1&&!fin){
+fin=true;
+setTimeout(function(){
+L.classList.add('done');
+setTimeout(ready,600);
+setTimeout(function(){L.remove()},1500);
+},350);
+}else if(!fin)requestAnimationFrame(tick);
+})(t0);
+}
+
+/* scroll: header, progress, parallax */
+var hd=$('#hd'),bar2=$('#bar'),pars=$$('.par'),ticking=false;
+function onScroll(){
+var y=window.scrollY||0,h=d.scrollHeight-innerHeight;
+hd.classList.toggle('sc',y>30);
+bar2.style.transform='scaleX('+(h>0?y/h:0)+')';
+if(reduce||!canHover&&innerWidth<900)return;
+pars.forEach(function(p){
+var r=p.getBoundingClientRect(),c=r.top+r.height/2-innerHeight/2;
+p.style.setProperty('--py',(-c*parseFloat(p.dataset.speed||0)).toFixed(1)+'px');
+});
+}
+addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(function(){onScroll();ticking=false})}},{passive:true});
+onScroll();
+
+/* reveal + counters */
+function count(el){
+var to=parseFloat(el.dataset.count),dc=parseInt(el.dataset.dec||0,10),t0=null,dur=1600;
+function f(t){if(!t0)t0=t;var p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=(to*e).toFixed(dc);if(p<1)requestAnimationFrame(f)}
+requestAnimationFrame(f);
+}
+var io=new IntersectionObserver(function(es){
+es.forEach(function(e){
+if(!e.isIntersecting)return;
+e.target.classList.add('in');
+if(!reduce){$$('[data-count]',e.target).forEach(count);if(e.target.dataset.count)count(e.target)}
+if(e.target._mk)e.target._mk.forEach(function(m){m.classList.add('in')});
+io.unobserve(e.target);
+});
+},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+$$('.rv-el,.sw,.rv').forEach(function(el){io.observe(el)});
+/* clip-path masked images: observe the parent, because a fully clipped element never reports as visible */
+$$('.mk').forEach(function(m){var p=m.parentElement;(p._mk=p._mk||[]).push(m);io.observe(p)});
+setTimeout(function(){$$('.mk:not(.in)').forEach(function(m){var r=m.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)m.classList.add('in')})},6000);
+
+/* hero parallax by mouse */
+var hero=$('.hero');
+if(canHover&&!reduce){
+hero.addEventListener('pointermove',function(e){
+var r=hero.getBoundingClientRect(),nx=(e.clientX-r.left)/r.width-.5,ny=(e.clientY-r.top)/r.height-.5;
+$$('.px',hero).forEach(function(p){
+var k=parseFloat(p.dataset.depth||0);
+p.style.setProperty('--tx',(nx*k).toFixed(1)+'px');
+p.style.setProperty('--ty',(ny*k).toFixed(1)+'px');
+});
+});
+}
+
+/* cursor glow + magnetic buttons */
+if(canHover&&!reduce){
+var cur=$('#cur'),cx=innerWidth/2,cy=innerHeight/2,tx=cx,ty=cy;
+addEventListener('pointermove',function(e){tx=e.clientX;ty=e.clientY;cur.classList.add('on')});
+document.addEventListener('pointerleave',function(){cur.classList.remove('on')});
+(function f(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;cur.style.transform='translate('+cx.toFixed(1)+'px,'+cy.toFixed(1)+'px)';requestAnimationFrame(f)})();
+$$('.mag').forEach(function(b){
+b.addEventListener('pointermove',function(e){
+var r=b.getBoundingClientRect();
+b.style.setProperty('--mx',((e.clientX-r.left-r.width/2)*.22).toFixed(1)+'px');
+b.style.setProperty('--my',((e.clientY-r.top-r.height/2)*.3).toFixed(1)+'px');
+});
+b.addEventListener('pointerleave',function(){b.style.setProperty('--mx','0px');b.style.setProperty('--my','0px')});
+});
+}
+
+/* scroll-velocity marquee */
+var mq=$('#mq');
+if(mq&&!reduce){
+var x=0,last=window.scrollY,v=0;
+(function f(){
+var y=window.scrollY,dy=y-last;last=y;
+v+=(dy-v)*.08;
+x-=.7+Math.abs(v)*.35;
+var w=mq.scrollWidth/2;
+if(-x>=w)x+=w;
+mq.style.transform='translateX('+x.toFixed(1)+'px)';
+requestAnimationFrame(f);
+})();
+}
+
+/* expanding treatment panels */
+var pn=$$('.pn'),auto=null,touched=false;
+function act(p){pn.forEach(function(q){q.classList.toggle('on',q===p)})}
+pn.forEach(function(p,i){
+function go(){touched=true;clearInterval(auto);act(p)}
+p.addEventListener('mouseenter',function(){if(canHover)go()});
+p.addEventListener('click',go);
+p.addEventListener('focus',go);
+});
+if(!reduce){
+var ci=0;
+auto=setInterval(function(){
+if(touched)return;
+var r=$('#pns').getBoundingClientRect();
+if(r.bottom<0||r.top>innerHeight)return;
+ci=(ci+1)%pn.length;act(pn[ci]);
+},4200);
+}
+
+/* results carousel */
+var rs=$('#rs'),rpg=$('#rpg');
+function stepW(){var c=$('.rc',rs);return c?c.offsetWidth+20:300}
+$('#rp').onclick=function(){rs.scrollBy({left:-stepW(),behavior:'smooth'})};
+$('#rn').onclick=function(){rs.scrollBy({left:stepW(),behavior:'smooth'})};
+function prog(){var m=rs.scrollWidth-rs.clientWidth;rpg.style.transform='scaleX('+(m>0?Math.max(.15,rs.scrollLeft/m):1)+')'}
+rs.addEventListener('scroll',prog,{passive:true});prog();
+var down=false,sx=0,sl=0;
+rs.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;sx=e.clientX;sl=rs.scrollLeft;rs.classList.add('drag')});
+addEventListener('pointerup',function(){down=false;rs.classList.remove('drag')});
+addEventListener('pointermove',function(e){if(!down)return;rs.scrollLeft=sl-(e.clientX-sx)});
+
+/* lightbox */
+var lb=$('#lb'),im=$('img',lb),bs=$$('.cg button'),cur2=0;
+function show(i){cur2=(i+bs.length)%bs.length;var s=$('img',bs[cur2]);im.src=s.src;im.alt=s.alt;lb.classList.add('on')}
+bs.forEach(function(b,i){b.addEventListener('click',function(){show(i)})});
+$('.x',lb).onclick=function(){lb.classList.remove('on')};
+$('.pv',lb).onclick=function(e){e.stopPropagation();show(cur2-1)};
+$('.nx',lb).onclick=function(e){e.stopPropagation();show(cur2+1)};
+lb.addEventListener('click',function(e){if(e.target===lb)lb.classList.remove('on')});
+document.addEventListener('keydown',function(e){
+if(!lb.classList.contains('on'))return;
+if(e.key==='Escape')lb.classList.remove('on');
+if(e.key==='ArrowLeft')show(cur2-1);
+if(e.key==='ArrowRight')show(cur2+1);
+});
+})();
+</script>
+</body>
+</html>
